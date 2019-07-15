@@ -7,11 +7,13 @@ output "public_dns" {
 }
 
 output "public_key" {
-  value     = "${tls_private_key.ssh-key-pair.public_key_openssh}"
-  sensitive = true
+  value = "${tls_private_key.ssh-key-pair.public_key_openssh}"
+
+  #sensitive = true
 }
 
 output "private_key" {
-  value     = "${tls_private_key.ssh-key-pair.private_key_pem}"
-  sensitive = true
+  value = "${tls_private_key.ssh-key-pair.private_key_pem}"
+
+  #sensitive = true
 }
